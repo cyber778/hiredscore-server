@@ -1,10 +1,10 @@
 import requests
-from datetime import date, datetime, timedelta
+from datetime import datetime
 
 from django.shortcuts import render
 
 # Create your views here.
-from django.http import HttpResponse, JsonResponse
+from django.http import JsonResponse
 
 
 def index(request):
@@ -55,5 +55,4 @@ def index(request):
         'version': '1.2.2'
     }
     context = {"data": data}
-    # return JsonResponse(context)
-    return render(request, 'hiring/index.html', context)
+    return JsonResponse(context)
