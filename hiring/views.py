@@ -21,7 +21,7 @@ def index(request):
             end_date = job['end_date']
             start_date = job['start_date']
             title = job['title']
-            history.append(f'(Worked as: {title}, From {start_date}  To {end_date})')
+            history.append(f'Worked as: {title}, From {start_date}  To {end_date}')
             
             # if the end date doesn't align with next job say how many days break there was
             if i < total_jobs:
